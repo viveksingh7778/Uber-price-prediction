@@ -1,0 +1,38 @@
+.bg-img {
+    background-image: url('../uber-logo-map-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pop-up {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card {
+    width: 33rem;
+    height: 35rem;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.car {
+    /* background-image: url('./car-svgrepo-com.svg'); /* Replace with your car icon image */
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 50%; /* Adjust this value based on your design */
+    left: -50px; /* Initial position outside the screen */
+    transition: left 2s linear; /* Animation transition properties */
+}
+
+.car-logo {
+    width: 100px;
+    height: 100px;
+}
