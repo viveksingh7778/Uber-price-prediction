@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Jaideep</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+          <style>
+        /* Add your custom styles here */
+        .navbar {
+            background-color: black;
+            margin-bottom: 0; /* Remove the margin-bottom to close the gap */
+             display: flex;
+             align-items: right;
+        }
+
+    </style>
+    </head>
+    <body>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../static/Logo.png" alt="Bootstrap" width="120" height="35">
+            </a>
+            </div>
+        </nav>
+        <div class="car">
+            <img class="car-logo" src="../static/car-svgrepo-com.svg" alt="Car SVG">
+        </div>
+        <div class="bg-img">
+            <div class="pop-up" id="result-popup">
+                <h2>
+                    fare price $ <span></span>{{results}}
+
+                </h2>
+            </div>
+            <div class="card">
+                <form action="{{ url_for('predict_datapoint')}}" method="post">
+                    <h2> Uber Price Predictor </h2>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <!-- <label class="form-label">Current_Location</label> -->
+                            <select class="form-control" name="Current_Location" placeholder="Enter your current location" required>
+                                <option class="placeholder" selected disabled value="">Select your current location</option>
+                                <option value="Back Bay">
+                                    Back Bay
+                                </option>
+                                <option value="Beacon Hill">
+                                    Beacon Hill
+                                </option>
+                                <option value="Boston University">
+                                    Boston University
+                                </option>
+                                <option value="Fenway">
+                                    Fenway
+                                </option>
+                                <option value="Financial District">
+                                    Financial District
+                                </option>
+                                <option value="Haymarket Square">
+                                    Haymarket Square
+                                </option>
+                                <option value="North End">
+                                    North End
+                                </option>
+                                <option value="North Station'">
+                                    North Station
+                                </option>
+                                <option value="Northeastern University">
+                                    Northeastern University
+                                </option>
+                                <option value="South Station">
+                                    South Station
+                                </option>
+                                <option value="Theatre District">
+                                    Theatre District
+                                </option>
+                                <option value="West End">
+                                    West End
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <!-- <label class="form-label">Destination</label> -->
+                            <select class="form-control" name="Destination" placeholder="Enter your Destination" required>
+                                <option class="placeholder" selected disabled value="">Select your Destination</option>
+                                <option value="Back Bay">
+                                    Back Bay
+                                </option>
+                                <option value="Beacon Hill">
+                                    Beacon Hill
+                                </option>
+                                <option value="Boston University">
+                                    Boston University
+                                </option>
+                                <option value="Fenway">
+                                    Fenway
+                                </option>
+                                <option value="Financial District">
+                                    Financial District
+                                </option>
+                                <option value="Haymarket Square">
+                                    Haymarket Square
+                                </option>
+                                <option value="North End">
+                                    North End
+                                </option>
+                                <option value="North Station'">
+                                    North Station
+                                </option>
+                                <option value="Northeastern University">
+                                    Northeastern University
+                                </option>
+                                <option value="South Station">
+                                    South Station
+                                </option>
+                                <option value="Theatre District">
+                                    Theatre District
+                                </option>
+                                <option value="West End">
+                                    West End
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <!-- <label class="form-label">Car_type</label> -->
+                            <select class="form-control" name="Car type" placeholder="Enter you Car type" required>
+                                <option class="placeholder" selected disabled value="">Select Car type</option>
+                                <option value="Black">
+                                    Black
+                                </option>
+                                <option value="Black SUV">
+                                    Black SUV
+                                </option>
+                                <option value="UberPool">
+                                    UberPool
+                                </option>
+                                <option value="UberX">
+                                    UberX
+                                </option>
+                                <option value="UberXL">
+                                    UberXL
+                                    WAV
+
+                                </option>
+                                <option value="WAV">
+                                    WAV
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input class="btn btn-primary" type="submit" value="Submit" required />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--        <script src="../static/js/script.js"></script>-->
+    </body>
+</html>
